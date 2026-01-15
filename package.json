@@ -1,0 +1,45 @@
+{
+  "name": "ivo-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export",
+    "lint": "next lint",
+    "test:smoke-xss": "node smoke-xss.js"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^3.11.0",
+    "@formkit/auto-animate": "^0.8.1",
+    "aos": "^2.3.4",
+    "eslint": "8.49.0",
+    "eslint-config-next": "13.4.19",
+    "install": "^0.13.0",
+    "next": "13.4.19",
+    "nextjs-cors": "^2.1.2",
+    "node-fetch": "^3.3.2",
+    "npm": "^10.2.0",
+    "pocketbase": "^0.18.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-feather": "^2.0.10",
+    "react-google-recaptcha": "^3.1.0",
+    "react-markdown": "^10.1.0",
+    "react-modal": "^3.16.1",
+    "react-multilevel-dropdown": "^4.0.0",
+    "remark-gfm": "^4.0.1",
+    "sass": "^1.69.5",
+    "sweetalert": "^2.1.2",
+    "swiper": "^10.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/postcss": "^4.1.11",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "puppeteer": "^24.15.0",
+    "tailwindcss": "^4.1.11"
+  }
+}
