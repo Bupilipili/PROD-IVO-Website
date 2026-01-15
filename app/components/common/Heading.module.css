@@ -1,0 +1,12 @@
+.heading span {
+  background: linear-gradient(91deg, #0e73e4 1.19%, #ffcd07 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 32px;
+  }
+}
