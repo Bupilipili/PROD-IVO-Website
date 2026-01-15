@@ -1,0 +1,48 @@
+.testimonialContainer {
+  padding: 40px 0 100px 0;
+}
+
+.testimonialContainer h1 {
+  text-align: center;
+  max-width: 824px;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.testimonials {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 24px;
+}
+
+.testimonialCard {
+  background-color: var(--white);
+  border-radius: 16px;
+  padding: 16px 24px;
+}
+
+.testimonialCard h5 {
+  color: var(--blue-01);
+  font-weight: 700;
+  line-height: 125%;
+  letter-spacing: -0.4px;
+}
+
+.position {
+  font-weight: 700;
+  line-height: 125%;
+  letter-spacing: -0.4px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  .testimonialContainer {
+    padding: 40px 0 60px 0;
+  }
+  .testimonials {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 40px;
+  }
+}
