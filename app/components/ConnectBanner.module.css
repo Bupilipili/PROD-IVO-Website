@@ -1,0 +1,17 @@
+.banner {
+    position: relative;
+    width: 100%;
+    height: 400px;       /* tweak as needed */
+    overflow: hidden;
+    margin-top: 7rem;
+  }
+  .image {
+    object-fit: cover;
+  }
+  @media (max-width: 768px) {
+    .banner {
+      height: 130px;
+      margin-top: 5rem;
+    }
+  }
+  
