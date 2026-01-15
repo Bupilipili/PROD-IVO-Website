@@ -1,0 +1,50 @@
+.drawerContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100dvh;
+  transition: transform 0.7s ease-in-out;
+  background-color: white;
+  width: 100%;
+  z-index: 50;
+  padding: 16px 16px 0 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translateX(100%);
+}
+
+.drawerOpen {
+  transform: translateX(0);
+}
+
+.drawerClosed {
+  transform: translateX(100%);
+}
+
+.flexContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menuHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.bottomBorder {
+  width: 156px;
+  height: 5px;
+  border-radius: 100px;
+  background: var(--Black, #000514);
+  margin: 9px auto;
+}
+
+@media screen and (min-width: 999px) {
+  .drawerContainer {
+    display: none;
+  }
+}
