@@ -1,0 +1,20 @@
+.workTogetherContainer {
+  width: 100%;
+  margin: 80px auto;
+  max-width: 652px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.workTogetherContainer p {
+  margin: 24px 0 80px 0;
+}
+
+@media (max-width: 768px) {
+  .workTogetherContainer p {
+    margin: 16px 0 24px 0;
+  }
+}
