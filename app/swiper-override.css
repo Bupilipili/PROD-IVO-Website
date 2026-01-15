@@ -1,0 +1,6 @@
+/* swiper-override.css */
+/* app/swiper-override.css */
+.swiper.swiper-initialized.swiper-horizontal {
+    overflow: visible !important;
+  }
+  
