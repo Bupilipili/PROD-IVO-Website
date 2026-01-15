@@ -1,0 +1,42 @@
+.valuedClients {
+  padding: 40px 0 80px 0;
+}
+
+.valuedClients h1 {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.clientContainer {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 80px;
+}
+
+.slide {
+  display: grid;
+  place-items: center;
+  height: 180px;
+}
+
+.slide img {
+  width: 150px;
+}
+
+@media (max-width: 768px) {
+  .valuedClients h1 {
+    margin-bottom: 40px;
+  }
+  .clientContainer {
+    gap: 32px;
+  }
+  .clientContainer img {
+    height: 32px;
+    width: auto;
+  }
+  .slide img {
+    width: 160px;
+  }
+}
