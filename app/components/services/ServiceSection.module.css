@@ -1,0 +1,87 @@
+.serviceSection {
+  padding: 40px 0;
+  margin-bottom: 40px;
+}
+
+.serviceSection h2 {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.mainContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.imageContainer {
+  flex: 1;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.pointsContainer {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.point {
+  padding: 40px 24px;
+  border-radius: 16px;
+  cursor: default;
+  transition: all 0.3s linear;
+  max-height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.point p {
+  margin-top: 0;
+  opacity: 0;
+  position: absolute;
+  margin-top: 16px;
+  transition: all 0.4s linear;
+}
+
+.point:hover {
+  height: fit-content;
+}
+
+.point:hover p {
+  opacity: 1;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .serviceSection {
+    margin-bottom: 40px;
+    padding-bottom: 0;
+  }
+  .mainContainer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .imageContainer img {
+    height: 270px;
+    width: 100%;
+    border-radius: 16px;
+  }
+
+  .serviceSection h2 {
+    display: none;
+  }
+  .point p {
+    display: block;
+    margin-top: 16px;
+  }
+}
