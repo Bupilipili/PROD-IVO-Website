@@ -1,0 +1,157 @@
+/* app/blogs/[slug]/page.module.css */
+
+.postTitle {
+    font-size: 2.5rem;
+    margin: 2rem 0 1rem;
+    color: var(--darkText);
+  }
+  
+  .postImage {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .postImage {
+      height: 200px;
+    }
+  }
+
+  .img {
+    object-fit: contain;
+  }
+  
+  .postDate {
+    color: var(--grey-03);
+    margin-bottom: 2rem;
+  }
+  
+  .postContent {
+    line-height: 1.6;
+    color: var(--grey-02);
+  }
+  
+
+  .cover {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 16px 0 24px;
+  }
+  .coverImg { object-fit: contain; }
+  
+  .title { margin: 8px 0 4px; color: var(--darkText); }
+  .date { color: var(--grey-03); margin-bottom: 16px; }
+  
+  .article :global(img) { width: 800px; height: auto; margin: 1rem; size: 20rem; }
+  .viewerWrap { margin-top: 12px; }
+  .fallback a { color: var(--blue-01); font-weight: 600; }
+  
+
+
+
+.banner { width: 100%; height: auto; border-radius: 8px; margin-bottom: 1rem; }
+.viewerWrap { width: 100%; aspect-ratio: 16/9; }
+.viewer { width: 100%; height: 100%; border: 0; }
+.download { margin-top: 0.75rem; }
+
+
+.coverWrap {
+  position: relative;
+  width: 100%;
+  height: 540px;       /* tweak to taste */
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 0 0 1.75rem;
+}
+@media (max-width: 768px) {
+  .coverWrap { height: 260px; }
+}
+.cover { object-fit: contain; }
+
+.content {
+  /* readable defaults for Mammoth HTML */
+  line-height: 1.75;
+  color: var(--darkText);
+}
+.content h1, .content h2, .content h3 { margin-top: 1.5rem; }
+.content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem auto;
+}
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+.content th, .content td {
+  border: 1px solid #e5e5e5;
+  padding: .5rem .75rem;
+}
+
+.pdfObject { border: none; }
+
+
+/* Give the converted HTML a controlled container */
+.docxContent {
+  max-width: 860px;   /* match your site’s body width */
+  margin: 0 auto;
+  line-height: 1.55;
+  font-size: 1.02rem;
+  color: var(--darkText);
+}
+
+/* Headings from style map */
+.docxContent h1.docx-title { font-size: 2rem; margin: 0 0 1rem; }
+.docxContent h2.docx-subtitle { font-size: 1.5rem; margin: 0 0 1rem; color: var(--grey-02); }
+.docxContent h2.docx-h1 { font-size: 1.6rem; margin: 1.2rem 0 .6rem; }
+.docxContent h3.docx-h2 { font-size: 1.35rem; margin: 1rem 0 .5rem; }
+.docxContent h4.docx-h3 { font-size: 1.15rem; margin: .8rem 0 .4rem; }
+
+/* Normal paragraphs – add the missing “space after” feel */
+.docxContent p.docx-p { margin: 0 0 0.9rem; }
+
+/* Quotes */
+.docxContent blockquote.docx-quote {
+  margin: 1rem 0;
+  padding: .75rem 1rem;
+  background: #fafafa;
+  border-left: 4px solid #e2e2e2;
+}
+
+/* Lists (match Word-ish indents & spacing) */
+.docxContent ul, .docxContent ol { margin: 0 0 1rem 1.5rem; }
+.docxContent li { margin: .25rem 0; }
+
+/* Tables */
+.docxContent table.docx-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+  table-layout: auto;
+}
+.docxContent td.docx-td, 
+.docxContent th {
+  border: 1px solid #ddd;
+  padding: .6rem .7rem;
+  vertical-align: top;
+}
+.docxContent th { background: #f6f6f6; font-weight: 600; }
+
+/* Images from DOCX */
+.docxContent img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: .5rem 0;
+}
+
+/* Preserve manual line breaks inside runs, but not full preformatted */
+.docxContent p, 
+.docxContent li { white-space: normal; }
