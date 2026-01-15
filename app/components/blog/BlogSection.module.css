@@ -1,0 +1,40 @@
+.blogSectionContainer {
+  display: grid;
+  margin-top: 100px;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.blog {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.blog img {
+  width: 100%;
+  height: 395px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+.blog h3 {
+  margin-top: 16px;
+}
+
+.readMore {
+  text-decoration: underline;
+  color: var(--blue-01);
+}
+
+@media (max-width: 768px) {
+  .blogSectionContainer {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    margin-top: 60px;
+  }
+  .blog img {
+    height: 220px;
+    border-radius: 12px;
+  }
+}
