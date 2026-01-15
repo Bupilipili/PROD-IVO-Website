@@ -1,0 +1,21 @@
+/* whatsapp button */
+.whatsappButton {
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 9999;
+}
+
+@media (max-width: 768px) {
+  .whatsappButton {
+    right: -4px;
+    bottom: 4px;
+  }
+  .whatsappButton img {
+    transform: scale(0.8);
+  }
+}
