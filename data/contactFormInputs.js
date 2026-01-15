@@ -1,0 +1,46 @@
+export const contactFormInputs = [
+  {
+    field: "First Name",
+    id: "firstName",
+    type: "text",
+    name: "firstName",
+    isRequired: true,
+  },
+  {
+    field: "Last Name",
+    id: "lastName",
+    type: "text",
+    name: "lastName",
+    isRequired: true,
+  },
+  {
+    field: "Your Email",
+    id: "email",
+    type: "email",
+    name: "email",
+    isRequired: true,
+  },
+  {
+    field: "Phone Number",
+    placeholder: "123 456 789",
+    id: "phone",
+    type: "text",
+    name: "phone",
+    isRequired: true,
+  },
+  {
+    field: "Title/Address",
+    placeholder: "Your Address",
+    id: "address",
+    type: "text",
+    name: "address",
+    isRequired: true,
+  },
+  {
+    field: "Company Name",
+    id: "company",
+    type: "text",
+    name: "company",
+    isRequired: true,
+  },
+];
