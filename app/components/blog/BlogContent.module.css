@@ -1,0 +1,21 @@
+.blogContent {
+  margin-top: 24px;
+  margin-bottom: 64px;
+  color: black !important;
+}
+
+.blogContent span {
+  font-size: 16px !important;
+  font-family: inherit !important;
+}
+
+.blogContent p {
+  margin-bottom: 16px;
+  font-size: 16px !important;
+}
+
+.blogContent a {
+  text-decoration: underline;
+  color: var(--blue-01);
+  font-weight: 700;
+}
