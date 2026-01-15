@@ -1,0 +1,44 @@
+.serviceHeader {
+  margin-top: 40px;
+  border-radius: 16px;
+  background-size: fill;
+  background-repeat: no-repeat;
+  padding: 80px;
+  padding-top: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+}
+
+.textContainer {
+  max-width: 800px;
+  width: auto;
+}
+
+.textContainer h5 {
+  text-transform: uppercase;
+  color: var(--yellow);
+  letter-spacing: -0.4px;
+}
+
+.textContainer h1 {
+  color: var(--white);
+  margin-top: 8px;
+}
+
+.textContainer p {
+  color: var(--white);
+  margin-top: 24px;
+}
+
+@media (max-width: 768px) {
+  .serviceHeader {
+    padding: 104px 24px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-position: center;
+    margin-top: 40px;
+  }
+}
