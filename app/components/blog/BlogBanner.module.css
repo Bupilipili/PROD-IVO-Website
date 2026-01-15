@@ -1,0 +1,26 @@
+.blogBannerContainer {
+  margin: 40px 0 24px 0;
+}
+
+.blogBannerContainer img {
+  width: 100%;
+  margin-bottom: 32px;
+  border-radius: 16px;
+  height: 395px;
+  object-fit: cover;
+}
+
+.blogBannerContainer h3 {
+  margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+  .blogBannerContainer {
+    margin: 32px 0 24px 0;
+  }
+
+  .blogBannerContainer img {
+    height: 200px;
+    margin-bottom: 16px;
+  }
+}
