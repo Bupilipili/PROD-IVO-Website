@@ -1,0 +1,35 @@
+.titleSection {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.contentDescription {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0e73e4;
+  margin-bottom: 24px;
+}
+.descriptionSection {
+  font-size: 16px;
+  font-weight: 500;
+}
+.descriptionSection li {
+  color: black;
+  font-weight: 700;
+}
+
+.contentSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 24px;
+}
+
+.subContentSection {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 12px;
+  margin-left: 20px;
+}
