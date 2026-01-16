@@ -70,20 +70,20 @@ const data = [
     width: 850,
     href: "/services",
   },
-  {
-    id: "4",
-    title: (
-      <>
-        Exploring the <span>Latest</span> Trends and Expertise
-      </>
-    ),
-    subtext:
-      "Stay Informed with Our In-Depth Blog Articles Covering a Range of Topics",
-    buttonText: "Our Blogs",
-    bannerUrl: "/banners/blogsBanner.mp4",
-    width: 652,
-    href: "/blogs",
-  },
+  // {
+  //   id: "4",
+  //   title: (
+  //     <>
+  //       Exploring the <span>Latest</span> Trends and Expertise
+  //     </>
+  //   ),
+  //   subtext:
+  //     "Stay Informed with Our In-Depth Blog Articles Covering a Range of Topics",
+  //   buttonText: "Our Blogs",
+  //   bannerUrl: "/banners/blogsBanner.mp4",
+  //   width: 652,
+  //   href: "/blogs",
+  // },
   // {
   //   id: "4",
   //   title: (
