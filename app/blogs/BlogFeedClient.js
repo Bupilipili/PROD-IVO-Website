@@ -17,10 +17,10 @@ export default function BlogFeedClient({
   const allPosts = [lead, ...rest];
 
   // find a post by id OR slug
-  const findPostByKey = useCallback(
-    (key) => allPosts.find((p) => p.id === key || p.slug === key),
-    [allPosts]
-  );
+  // const findPostByKey = useCallback(
+  //   (key) => allPosts.find((p) => p.id === key || p.slug === key),
+  //   [allPosts]
+  // );
 
   const handleOpen = useCallback(
     (key) => {
