@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import styles from "./page.module.css";
 import { API_URL } from "@/lib/config";
 
+export const revalidate = 0;
+
 export default async function BlogPostPage({ params }) {
   const { slug } = params;
 
