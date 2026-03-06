@@ -98,8 +98,8 @@ function FooterSectionTwo() {
       <Link href='/website-disclaimer.html' target='_blank'>
         Website Disclaimer
       </Link>
-      <Link href='/isms-policy.html' target='_blank'>
-        ISMS Policy
+      <Link href='/isms-policy' target='_blank'>
+        Information Security Policy
       </Link>
     </div>
   );
