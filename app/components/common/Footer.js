@@ -99,7 +99,7 @@ function FooterSectionTwo() {
         Website Disclaimer
       </Link>
       <Link href='/isms-policy' target='_blank'>
-        ISMS Policy
+        Information Security Policy
       </Link>
     </div>
   );
