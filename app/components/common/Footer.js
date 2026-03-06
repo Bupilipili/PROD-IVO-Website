@@ -89,16 +89,16 @@ function FooterSectionTwo() {
   return (
     <div className={styles.footerSection}>
       <h4>Legal Links</h4>
-      <Link href='/terms-of-use' target='_blank'>
+      <Link href='/terms-of-use.html' target='_blank'>
         Term of Use
       </Link>
-      <Link href='/data-protection-policy' target='_blank'>
+      <Link href='/data-protection-policy.html' target='_blank'>
         Data Protection Policy
       </Link>
-      <Link href='/website-disclaimer' target='_blank'>
+      <Link href='/website-disclaimer.html' target='_blank'>
         Website Disclaimer
       </Link>
-      <Link href='/isms-policy' target='_blank'>
+      <Link href='/isms-policy.html' target='_blank'>
         ISMS Policy
       </Link>
     </div>
@@ -228,7 +228,7 @@ export function FooterBottomContainer() {
     >
       <div className={styles.logoContainer}>
         <img src='/logos/logo.svg' alt='' />
-        <p>@2025 All Rights Reserved</p>
+        <p>@2026 All Rights Reserved</p>
         <Link href='https://dotsyndicate.com' target='_blank'>
           Developer by <span>Dotsyndicate</span>
         </Link>
