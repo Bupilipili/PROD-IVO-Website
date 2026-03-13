@@ -1,85 +1,167 @@
-import CloudSection from "@/app/components/cloud/CloudSection";
+"use client";
 import BackButton from "@/app/components/common/BackButton";
 import WorkTogether from "@/app/components/common/WorkTogether";
+import BestService from "@/app/components/common/BestService";
+import WhyIvo from "@/app/components/common/WhyIvo";
+import ClientFeedback from "@/app/components/common/ClientFeedback";
+import StayUpdated from "@/app/components/common/StayUpdated";
 import ServiceHeader from "@/app/components/services/ServiceHeader";
-import TextSection from "@/app/components/solutions/TextSection";
-import { solutionsData } from "@/data/solutions";
+import SolutionContentSection from "@/app/components/solutions/SolutionContentSection";
+
 const cyberSecurityHeaderData = {
   id: "1",
   img: "/solutions/cyber/cyber.webp",
   text: "Cybersecurity",
   subText: "Consulting",
+  description:
+    "Our Cyber Security Consultation Service is dedicated to protecting your business systems from cybercriminals with cutting-edge resources and extensive expertise.",
+  btnText: "Let's Talk",
 };
 
-const cyberSecuritySectionData = [
-  {
-    id: "1",
-    img: "/solutions/cyber/cyber_a.webp",
-    title: "Managed Network Security Service",
-    description: `Our engineers are highly skilled on all Palo Alto Networks, FortiGate and Cisco firewalls, and have deployed firewalls for customers in the Banking, Insurance, education sector and the logistics, mining, retail, and warehousing industries, among others. 
+const bestServiceDescription =
+  "Our Cyber Security Consultation Service is dedicated to protecting your business systems from cybercriminals. We understand that a comprehensive defence strategy is critical, and that's why we combine our extensive cybersecurity expertise with cutting-edge resources to shield your data, applications, networks, and cloud infrastructure from attackers.";
 
-      We are proficient in building modern, agile, and resilient business networks to connect your workforces and workloads across branches, campuses, data centres, and cloud, hybrid, and virtualised environments. We provide end-to-end support, from setting up your physical and virtual infrastructure to optimising your resources for maximum uptime and minimal disruption. `,
+const identitySecurityData = {
+  subtitle: "Cyber Security Solution",
+  title: "Identity Security",
+  description:
+    "We Provide Comprehensive Identity Protection Through Multi-Factor Authentication (MFA), Privileged Access Management (PAM), And Endpoint Privilege Management (EPM) To Safeguard Your Organization's Critical Identities And Access Points.",
+  solutionsTitle: "Our Identity Security Solutions",
+  solutions: [
+    "Multi-Factor Authentication (MFA) with adaptive risk-based requirements",
+    "Privileged Access Management (PAM) for securing critical identities",
+    "Endpoint Privilege Management (EPM) for workstation-level control",
+  ],
+  image: "/solutions/cyber/cyber_a.webp",
+};
+
+const networkSecurityData = {
+  subtitle: "Cyber Security Solution",
+  title: "Network Security",
+  description:
+    "As Cybersecurity Experts, We Architect, Implement, And Manage Advanced Technologies To Fortify Network Security, Delivering Robust Perimeter Defenses Against Cyber Threats. Network Security Encompasses All The Steps Taken To Protect The Integrity Of A Computer Network And The Data Within It.",
+  solutionsTitle: "Our Network Security Solutions",
+  solutions: [
+    "Next-Generation Firewalls (NGFW)",
+    "Network Access Control (NAC)",
+    "Network Detection & Response (NDR)",
+    "Secure SD-WAN & SASE",
+  ],
+  image: "/solutions/cyber/cyber_b.webp",
+  bottomDescription:
+    "IVO's Role: We architect, integrate, and manage the solutions and processes that bring Zero Trust to life.",
+};
+
+const databaseSecurityData = {
+  subtitle: "Cyber Security Solution",
+  title: "Database Security",
+  description:
+    "Our Solutions Secure Sensitive Data, Maintain Database Integrity, And Ensure Compliance. Services Include Database Activity Monitoring (DAM), Transparent DB Encryption (TDE), Database Vault, Dataguard, Key Vault, And Zero Data Loss Capabilities.",
+  solutionsTitle: "Our Database Security Solutions",
+  solutions: [
+    "Database Activity Monitoring (DAM)",
+    "Transparent DB Encryption (TDE)",
+    "Database Security Assessment Tool (DBSAT)",
+    "Database Vault",
+    "Dataguard",
+    "Key Vault",
+    "Zero Data Loss",
+  ],
+  image: "/solutions/cyber/cyber_c.webp",
+};
+
+const endpointSecurityData = {
+  subtitle: "Cyber Security Solution",
+  title: "Endpoint Security",
+  description:
+    "Protecting Workstations, Servers, And Devices, Our Endpoint Detection And Response (EDR) And Extended Detection And Response (XDR) Solutions Detect, Contain, And Remediate Threats In Real Time.",
+  solutionsTitle: "Our Endpoint Security Solutions",
+  solutions: [
+    "Antivirus",
+    "Endpoint Detection and Response (EDR)",
+    "Extended Detection and Response (XDR)",
+  ],
+  image: "/solutions/cyber/cyber_e.webp",
+  bottomDescription:
+    "The Endpoint Detection And Response (EDR) Is A Solution That Can Record And Store Endpoint System-Level Behaviors, Use Various Data Analytics Techniques To Detect Suspicious System Behavior, Provide Contextual Information, Block Malicious Activity, And Provide Remediation Suggestions To Restore Affected Systems.",
+};
+
+const applicationSecurityData = {
+  subtitle: "Cyber Security Solution",
+  title: "Application Security",
+  description:
+    "We Secure Applications Against External Threats With Web Application Firewalls (WAF), Anti-DDoS, Application Delivery Controllers (ADC), And Load Balancers, Safeguarding Sensitive Data And Ensuring Compliance.",
+  solutionsTitle: "Our Application Security Solutions",
+  solutions: [
+    "Web Application Firewall (WAF)",
+    "Anti-DDoS",
+    "Application Delivery Controllers (ADC)",
+    "Load Balancers",
+  ],
+  image: "/solutions/cyber/cyber_f.webp",
+};
+
+const dataSecurityData = {
+  subtitle: "Cyber Security Solution",
+  title: "Data Security",
+  description:
+    "Our Data Protection Solutions Include Data Loss Prevention (DLP), Data Classification, Encryption, And Email Security, Ensuring Sensitive Information Remains Secure Throughout Its Lifecycle.",
+  solutionsTitle: "Our Data Security Solutions",
+  solutions: [
+    "Data Loss Protection (DLP)",
+    "Data Classification",
+    "Data Encryption",
+    "Email Security",
+  ],
+  image: "/solutions/cyber/cyber_d.webp",
+};
+
+const whyIvoCards = [
+  {
+    title: "NIST Frameworks:",
+    description:
+      "Aligning with both the Cybersecurity Framework (CSF) and SP 800-207 (Zero Trust Architecture).",
   },
   {
-    id: "2",
-    img: "/solutions/cyber/cyber_b.webp",
-    title: `Privileged Access Management
-    (PAM)`,
-    description: `Our advanced Privileged Access Management (PAM) solution is a crucial component of our comprehensive security portfolio. With our PAM offerings, you can effectively control, monitor, and secure privileged access within your organization. We enable you to mitigate the risks associated with unauthorized access to critical systems and data. 
-
-      Our PAM solutions encompass features like privileged user authentication, session monitoring, and privileged credential management. By implementing our PAM solutions, you'll enhance your security posture, meet compliance requirements, and safeguard sensitive information.`,
+    title: "ISO 27001 Implementation:",
+    description: "Formalizing our ISMS to govern the Zero Trust controls.",
   },
   {
-    id: "3",
-    img: "/solutions/cyber/cyber_c.webp",
-    title: `Database Access Management and Database Firewall solutions (DAM)`,
-    description: `Discover the power of our cutting-edge Database Access Management and Database Firewall solutions, featuring industry leaders like Oracle Audit Vault and Database Firewall (AVDF) and Imperva Database Access Management (DAM). Our AVDF and Imperva DAM offerings provide robust protection for your critical databases, allowing you to maintain control, visibility, and security over your sensitive data. 
-
-      With AVDF, you gain real-time monitoring, auditing, and alerting to detect and respond to threats, while Imperva DAM enables precise access control, privileged user management, and comprehensive data activity monitoring. Together, these solutions bolster your database security strategy, ensuring compliance with data protection regulations and safeguarding your organization's most valuable assets.`,
-  },
-  {
-    id: "4",
-    img: "/solutions/cyber/cyber_d.webp",
-    title: "SD-WAN & SASE ",
-    description: `At IVO Solutions, we can help both SMEs and large enterprise organisations to build the perfect WAN solution that fits their specific needs and budget, unlocking their network's full potential. 
-
-      Our SD-WAN & Virtualisation solutions enable seamless connectivity for remote workers and allow us to build custom fabric solutions to support virtualised machines.
-       
-      These solutions come with a range of benefits, including reducing latency, minimising packet loss, and ensuring high availability for always-on employees. 
-      `,
-  },
-  {
-    id: "5",
-    img: "/solutions/cyber/cyber_e.webp",
-    title: "MANAGED  XDR",
-    description: `Managed Extended Detection and Response (MXDR) is a cybersecurity solution that helps organisations detect and respond to security threats in real-time. 
-
-      It combines multiple security technologies, such as security operations centre (SoC), endpoint detection and response (EDR), network detection and response (NDR), and security information and event management (SIEM), with advanced analytics and machine learning capabilities to provide a comprehensive security posture for an organization. 
-      `,
-  },
-  {
-    id: "6",
-    img: "/solutions/cyber/cyber_f.webp",
-    title: "DLP, Email and Application Security",
-    description: `we safeguard your business with Data Loss Prevention (DLP), Email Security, and Application Security. Our DLP solutions protect sensitive data from unauthorized access and breaches, ensuring compliance and reputation protection. 
-
-    Email Security shields you from phishing attacks, malware, and email threats, securing your communications and data. Meanwhile, Application Security keeps your software safe from vulnerabilities and attacks. Together, these solutions seamlessly integrate to offer holistic protection, as demonstrated by our case studies and testimonials.     
-      `,
+    title: "Data Protection Compliance:",
+    description:
+      "Certified as a Data Protection Processor/Controller under Tanzania's Data Protection Act, 2022.",
   },
 ];
-export default function page() {
+
+export default function CyberSecurityPage() {
   return (
-    <main className='body-wrapper'>
-      <BackButton backUrl='/solutions' />
+    <main className="body-wrapper">
+      <BackButton backUrl="/solutions" />
       <ServiceHeader data={cyberSecurityHeaderData} />
-      <div style={{ marginTop: "40px" }}>
-        {solutionsData[4].textSections.map((textSection) => (
-          <TextSection key={textSection.id} {...textSection} />
-        ))}
-      </div>
-      {cyberSecuritySectionData?.map((data) => (
-        <CloudSection key={data?.id} data={data} />
-      ))}
+
+      <BestService description={bestServiceDescription} />
+
+      <SolutionContentSection {...identitySecurityData} />
+
+      <SolutionContentSection {...networkSecurityData} reverse />
+
+      <WhyIvo
+        subtitle="Cyber Security Solution"
+        title="Why Ivo For Your Zero?"
+        description="We Implement Zero Trust Using Industry Best Practices:"
+        cards={whyIvoCards}
+      />
+
+      <SolutionContentSection {...databaseSecurityData} />
+
+      <SolutionContentSection {...endpointSecurityData} reverse />
+
+      <SolutionContentSection {...applicationSecurityData} />
+
+      <SolutionContentSection {...dataSecurityData} reverse />
+
+      <ClientFeedback />
+      <StayUpdated />
       <WorkTogether />
     </main>
   );

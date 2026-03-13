@@ -1,0 +1,160 @@
+.sectionContainer {
+  padding: 60px 0;
+  margin-top: 20px;
+}
+
+.subtitle {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--grey-02);
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.title {
+  color: var(--blue-01);
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: -1px;
+}
+
+.description {
+  color: var(--grey-02);
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  max-width: 900px;
+}
+
+.solutionsTitle {
+  color: var(--blue-01);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  letter-spacing: -0.4px;
+}
+
+.contentGrid {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.solutionsList {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.solutionItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: var(--white);
+  border-radius: 12px;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s ease;
+}
+
+.solutionItem:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.iconWrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--grey-01);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.solutionText {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--black);
+}
+
+.imageWrapper {
+  flex: 1;
+  max-width: 500px;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.bottomDescription {
+  color: var(--grey-02);
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  max-width: 900px;
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 32px;
+  border-radius: 40px;
+  border: 2px solid var(--blue-01);
+  background: transparent;
+  color: var(--blue-01);
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  background: var(--blue-01);
+  color: var(--white);
+}
+
+.ctaButton svg {
+  width: 18px;
+  height: 18px;
+}
+
+@media (max-width: 768px) {
+  .sectionContainer {
+    padding: 40px 0;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .contentGrid {
+    flex-direction: column !important;
+    gap: 24px;
+  }
+
+  .imageWrapper {
+    max-width: 100%;
+  }
+
+  .solutionItem {
+    padding: 12px;
+  }
+
+  .solutionText {
+    font-size: 14px;
+  }
+
+  .ctaButton {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}

@@ -1,8 +1,12 @@
-import WorkTogether from "@/app/components/common/WorkTogether";
+"use client";
 import BackButton from "@/app/components/common/BackButton";
-import TextSection from "@/app/components/solutions/TextSection";
+import WorkTogether from "@/app/components/common/WorkTogether";
+import BestService from "@/app/components/common/BestService";
+import WhyIvo from "@/app/components/common/WhyIvo";
+import ClientFeedback from "@/app/components/common/ClientFeedback";
+import StayUpdated from "@/app/components/common/StayUpdated";
 import ServiceHeader from "@/app/components/services/ServiceHeader";
-import FooterData from "@/app/components/cloud/FooterData";
+import SolutionContentSection from "@/app/components/solutions/SolutionContentSection";
 
 const cxCommunicationBannerData = {
   id: "1",
@@ -10,162 +14,82 @@ const cxCommunicationBannerData = {
   text: "Work without limits using",
   subText: "3CX Communication",
   description: "The ultimate business communication solution with 3CX!",
+  btnText: "Let's Talk",
 };
 
-const cxCommunicationHeaderData = {
-  id: "1",
-  name: "3cxCommunication",
-  title: "3cxCommunication",
-  textSection: [
-    {
-      id: "1",
-      title: "",
-      description: `<p>3CX is a robust, fully equipped communications system, which allows you to communicate with your colleagues and customers - anywhere, anytime.
-      </p>`,
-    },
-    {
-      id: "2",
-      title: "",
-      description: `<p>You can trial a fully equipped 3CX System today! <br> Our team will gladly give you a quick demo and answer any questions!</p>`,
-    },
+const bestServiceDescription =
+  "3CX is a robust, fully equipped communications system, which allows you to communicate with your colleagues and customers - anywhere, anytime. You can trial a fully equipped 3CX System today! Our team will gladly give you a quick demo and answer any questions!";
+
+const communicationData = {
+  subtitle: "Collaboration Solution",
+  title: "3CX Communication Platform",
+  description:
+    "3CX is a complete unified communications solution that includes telephony, video conferencing, live chat, and SMS capabilities - all integrated into one powerful platform.",
+  solutionsTitle: "Key Features",
+  solutions: [
+    "Telephony - Web client and mobile apps for remote working",
+    "Video Conferencing - Included in your system, no add-ons needed",
+    "Live Chat - Talk with customers via your website or WhatsApp",
+    "SMS - Allow your customers to interact with you instantly",
+    "CRM & Microsoft 365 Integrations",
   ],
+  image: "/solutions/3cxCommunication/3cxCommunication.webp",
 };
 
-const cxCommunicationFooterData = [
+const deploymentData = {
+  subtitle: "Collaboration Solution",
+  title: "Flexible Deployment",
+  description:
+    "3CX offers flexible deployment options to suit your business needs. Whether you prefer on-premise, cloud, or hybrid solutions, we have you covered.",
+  solutionsTitle: "Deployment Options",
+  solutions: [
+    "On-premise hosting (MiniPC, Hyper-V, VMware, KVM)",
+    "Cloud-hosted solution",
+    "Hybrid deployment",
+    "Keep your existing numbers and providers",
+  ],
+  image: "/solutions/3cxCommunication/3cxCommunication.webp",
+};
+
+const whyIvoCards = [
   {
-    id: "1",
-    title: "Compelling reasons why 3CX is the perfect fit for your business",
-    description: "",
-    content: [
-      {
-        id: "1",
-        title: "Telephony",
-        subContent: [
-          {
-            id: "1",
-            description: "Web client and mobile apps for remote working",
-          },
-        ],
-      },
-      {
-        id: "2",
-        title: "Video",
-        subContent: [
-          {
-            id: "1",
-            description: "Included in your system, no add-ons needed",
-          },
-        ],
-      },
-      {
-        id: "3",
-        title: "Live Chat",
-        subContent: [
-          {
-            id: "1",
-            description:
-              "Talk with your customers in real time via your website or WhatsApp",
-          },
-        ],
-      },
-      {
-        id: "4",
-        title: "SMS",
-        subContent: [
-          {
-            id: "1",
-            description: "Allow your customers to interact with you instantly",
-          },
-        ],
-      },
-      {
-        id: "5",
-        title: "Integrations",
-        subContent: [
-          {
-            id: "1",
-            description: "CRMs and Microsoft 365",
-          },
-        ],
-      },
-      {
-        id: "6",
-        title: "Low Cost",
-        subContent: [
-          {
-            id: "1",
-            description: "Save on your phone bills, add ons and hardware",
-          },
-        ],
-      },
-      {
-        id: "7",
-        title: "Flexible",
-        subContent: [
-          {
-            id: "1",
-            description:
-              "Keep your numbers, choose your phones and your provider",
-          },
-        ],
-      },
-      {
-        id: "8",
-        title: "Secure",
-        subContent: [
-          {
-            id: "1",
-            description: "3CX includes advanced security features",
-          },
-        ],
-      },
-      {
-        id: "9",
-        title: "Install anywhere",
-        subContent: [
-          {
-            id: "1",
-            description: "Hosted on-premise, MiniPC, Hyper-V, VMware or KVM",
-          },
-        ],
-      },
-      {
-        id: "10",
-        title: "Backed by the vendor, supported by us",
-        subContent: [
-          {
-            id: "1",
-            description: "600,000+ customers globally",
-          },
-        ],
-      },
-    ],
+    title: "Low Cost:",
+    description:
+      "Save on your phone bills, add-ons and hardware with an all-in-one communication platform.",
+  },
+  {
+    title: "Secure & Reliable:",
+    description:
+      "3CX includes advanced security features and is backed by 600,000+ customers globally.",
+  },
+  {
+    title: "Expert Support:",
+    description:
+      "Backed by the vendor, supported by us - get the best of both worlds with our certified 3CX expertise.",
   },
 ];
 
-const cxCommunicationTextData = {
-  id: "1",
-  title: "",
-  description: `<p>Backed by the vendor, supported by us <br>
-  600,000+ customers globally<p>`,
-};
-
-export default function page() {
+export default function CollaborationSolutionPage() {
   return (
-    <main className='body-wrapper'>
-      <BackButton backUrl='/solutions' />
+    <main className="body-wrapper">
+      <BackButton backUrl="/solutions" />
       <ServiceHeader data={cxCommunicationBannerData} />
-      <div style={{ marginTop: "40px" }}>
-        {cxCommunicationHeaderData.textSection.map((textSection) => (
-          <TextSection key={textSection.id} {...textSection} />
-        ))}
-      </div>
-      {cxCommunicationFooterData.map((data) => (
-        <FooterData key={data?.id} data={data} />
-      ))}
-      <div style={{ marginTop: "24px" }}>
-        <TextSection {...cxCommunicationTextData} />
-      </div>
+
+      <BestService description={bestServiceDescription} />
+
+      <SolutionContentSection {...communicationData} />
+
+      <SolutionContentSection {...deploymentData} reverse />
+
+      <WhyIvo
+        subtitle="Collaboration Solution"
+        title="Why Ivo For Your Communication?"
+        description="We deliver enterprise-grade communication solutions:"
+        cards={whyIvoCards}
+      />
+
+      <ClientFeedback />
+      <StayUpdated />
       <WorkTogether />
     </main>
   );
